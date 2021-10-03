@@ -1,0 +1,75 @@
+package com.example.ejercicios_guia
+
+class Empleado {
+
+    var nombre: String = ""
+    var sueldo: Double = 0.0
+    var area: String = ""
+    var cargo: String = ""
+    var tiempo: Int = 0
+
+
+    constructor( nombre: String, sueldo: Double, area: String, cargo: String, tiempo: Int){
+
+        this.nombre = nombre
+        this.sueldo = sueldo
+        this.area = area
+        this.cargo = cargo
+        this.tiempo = tiempo
+
+        if(sueldo < 0.0 && area == "" && cargo == ""){
+
+            println("El sueldo no puede ser negativo")
+            println("de igual manera el cargo y area no pueden quedar vacios")
+
+        }
+        else if(sueldo >= 0.0 && area == "" && cargo == ""){
+
+            println("$sueldo")
+            println("de igual manera el cargo y area no pueden quedar vacios")
+        }
+        else if(sueldo < 0.0 && area != "" && cargo == ""){
+
+            println("$area")
+            println("El sueldo no puede ser negativo")
+            println("de igual manera el cargo no puede quedar vacio")
+        }
+        else if(sueldo < 0.0 && area == "" && cargo != ""){
+
+            println("$cargo")
+            println("El sueldo no puede ser negativo")
+            println("de igual manera el area no puede quedar vacio")
+        }
+        else if(sueldo >= 0.0 && area != "" && cargo == ""){
+
+            println("$sueldo")
+            println("$area")
+            println("de igual manera el cargo no puede quedar vacio")
+        }
+        else if(sueldo >= 0.0 && area == "" && cargo != ""){
+
+            println("$sueldo")
+            println("$cargo")
+            println("de igual manera el area no puede quedar vacio")
+        }
+        else if(sueldo < 0.0 && area != "" && cargo != ""){
+
+            println("$area")
+            println("$cargo")
+            println("El sueldo no puede ser negativo")
+        }
+        else if(sueldo >= 0.0 && area != "" && cargo != ""){
+
+            println("$sueldo")
+            println("$area")
+            println("$cargo")
+
+        }
+
+
+
+
+
+    }
+
+}
