@@ -17,57 +17,156 @@ class Empleado {
         this.cargo = cargo
         this.tiempo = tiempo
 
-        if(sueldo < 0.0 && area == "" && cargo == ""){
+        if (tiempo >= 5)
+        {
+            if (tiempo % 5 == 0)
+            {
+                var valor : Int = tiempo / 5
+                var bono : Int = valor * 25
+                var SueldoLiquido : Double = bono.toDouble() + sueldo
 
-            println("El sueldo no puede ser negativo")
-            println("de igual manera el cargo y area no pueden quedar vacios")
+
+                if(sueldo < 0.0 && area == "" && cargo == ""){
+
+                    println("$nombre")
+                    println("$tiempo")
+                    println("El sueldo no puede ser negativo")
+                    println("de igual manera el cargo y area no pueden quedar vacios")
+
+
+                }
+                else if(sueldo >= 0.0 && area == "" && cargo == ""){
+
+                    println("$nombre")
+                    println("$tiempo")
+                    println("$SueldoLiquido")
+                    println("de igual manera el cargo y area no pueden quedar vacios")
+                }
+                else if(sueldo < 0.0 && area != "" && cargo == ""){
+
+                    println("$nombre")
+                    println("$tiempo")
+                    println("$area")
+                    println("El sueldo no puede ser negativo")
+                    println("de igual manera el cargo no puede quedar vacio")
+                }
+                else if(sueldo < 0.0 && area == "" && cargo != ""){
+
+                    println("$nombre")
+                    println("$tiempo")
+                    println("$cargo")
+                    println("El sueldo no puede ser negativo")
+                    println("de igual manera el area no puede quedar vacio")
+                }
+                else if(sueldo >= 0.0 && area != "" && cargo == ""){
+
+                    println("$nombre")
+                    println("$tiempo")
+                    println("$SueldoLiquido")
+                    println("$area")
+                    println("de igual manera el cargo no puede quedar vacio")
+                }
+                else if(sueldo >= 0.0 && area == "" && cargo != ""){
+
+                    println("$nombre")
+                    println("$tiempo")
+                    println("$SueldoLiquido")
+                    println("$cargo")
+                    println("de igual manera el area no puede quedar vacio")
+                }
+                else if(sueldo < 0.0 && area != "" && cargo != ""){
+
+                    println("$nombre")
+                    println("$tiempo")
+                    println("$area")
+                    println("$cargo")
+                    println("El sueldo no puede ser negativo")
+                }
+                else if(sueldo >= 0.0 && area != "" && cargo != ""){
+
+                    println("$nombre")
+                    println("$tiempo")
+                    println("$SueldoLiquido")
+                    println("$area")
+                    println("$cargo")
+
+                }
+
+
+            }
+        }
+        else if (tiempo < 5)
+        {
+
+            if(sueldo < 0.0 && area == "" && cargo == ""){
+
+                println("$nombre")
+                println("$tiempo")
+                println("El sueldo no puede ser negativo")
+                println("de igual manera el cargo y area no pueden quedar vacios")
+
+
+
+            }
+            else if(sueldo >= 0.0 && area == "" && cargo == ""){
+
+                println("$nombre")
+                println("$tiempo")
+                println("$sueldo")
+                println("de igual manera el cargo y area no pueden quedar vacios")
+            }
+            else if(sueldo < 0.0 && area != "" && cargo == ""){
+
+                println("$nombre")
+                println("$tiempo")
+                println("$area")
+                println("El sueldo no puede ser negativo")
+                println("de igual manera el cargo no puede quedar vacio")
+            }
+            else if(sueldo < 0.0 && area == "" && cargo != ""){
+
+                println("$nombre")
+                println("$tiempo")
+                println("$cargo")
+                println("El sueldo no puede ser negativo")
+                println("de igual manera el area no puede quedar vacio")
+            }
+            else if(sueldo >= 0.0 && area != "" && cargo == ""){
+
+                println("$nombre")
+                println("$tiempo")
+                println("$sueldo")
+                println("$area")
+                println("de igual manera el cargo no puede quedar vacio")
+            }
+            else if(sueldo >= 0.0 && area == "" && cargo != ""){
+
+                println("$nombre")
+                println("$tiempo")
+                println("$sueldo")
+                println("$cargo")
+                println("de igual manera el area no puede quedar vacio")
+            }
+            else if(sueldo < 0.0 && area != "" && cargo != ""){
+
+                println("$nombre")
+                println("$tiempo")
+                println("$area")
+                println("$cargo")
+                println("El sueldo no puede ser negativo")
+            }
+            else if(sueldo >= 0.0 && area != "" && cargo != ""){
+
+                println("$nombre")
+                println("$tiempo")
+                println("$sueldo")
+                println("$area")
+                println("$cargo")
+
+            }
+
 
         }
-        else if(sueldo >= 0.0 && area == "" && cargo == ""){
-
-            println("$sueldo")
-            println("de igual manera el cargo y area no pueden quedar vacios")
-        }
-        else if(sueldo < 0.0 && area != "" && cargo == ""){
-
-            println("$area")
-            println("El sueldo no puede ser negativo")
-            println("de igual manera el cargo no puede quedar vacio")
-        }
-        else if(sueldo < 0.0 && area == "" && cargo != ""){
-
-            println("$cargo")
-            println("El sueldo no puede ser negativo")
-            println("de igual manera el area no puede quedar vacio")
-        }
-        else if(sueldo >= 0.0 && area != "" && cargo == ""){
-
-            println("$sueldo")
-            println("$area")
-            println("de igual manera el cargo no puede quedar vacio")
-        }
-        else if(sueldo >= 0.0 && area == "" && cargo != ""){
-
-            println("$sueldo")
-            println("$cargo")
-            println("de igual manera el area no puede quedar vacio")
-        }
-        else if(sueldo < 0.0 && area != "" && cargo != ""){
-
-            println("$area")
-            println("$cargo")
-            println("El sueldo no puede ser negativo")
-        }
-        else if(sueldo >= 0.0 && area != "" && cargo != ""){
-
-            println("$sueldo")
-            println("$area")
-            println("$cargo")
-
-        }
-
-
-
 
 
     }
